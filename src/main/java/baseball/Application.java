@@ -1,7 +1,12 @@
 package baseball;
 
+import service.BaseBallGame;
+
 public class Application {
     public static void main(String[] args) {
-        //TODO: 숫자 야구 게임 구현
+        BaseBallGame baseBallGame = BaseBallGame.getBaseBallGame();
+        do {
+            baseBallGame.play();
+        } while (!baseBallGame.terminate());
     }
 }
